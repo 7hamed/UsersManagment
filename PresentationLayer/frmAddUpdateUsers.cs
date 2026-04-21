@@ -39,8 +39,6 @@ namespace UsersManagment
             }
         }
 
-
-
         private void lblUploadPhoto_Click(object sender, EventArgs e)
         {
             DialogResult result = ofdImage.ShowDialog();
@@ -64,12 +62,12 @@ namespace UsersManagment
 
             if (_User.Save())
             {
-                MessageBox.Show("Contact Save Successfully.");
+                MessageBox.Show("User Save Successfully.");
                 _Mode = enMode.UpdateUser;
             }
             else
             {
-                MessageBox.Show("Contact Not Save :( ");
+                MessageBox.Show("User Not Save :( ");
                 return;
             }
 
@@ -126,7 +124,7 @@ namespace UsersManagment
                     if (_User == null)
                     {
                         MessageBox.Show("the user not found");
-
+                        this.Close();
                     }
                     _UpdateModeFrom();
                     break;

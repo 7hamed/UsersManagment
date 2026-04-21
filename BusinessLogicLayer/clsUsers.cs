@@ -41,6 +41,7 @@ namespace BusinessLogicLayer
             this.UserName = userName;
             this.Email = email;
             this.Password = password;
+            this.ImagePath = imagePath; // i forgot this :)
             this._Mode = enMode.Update;
         }
 

@@ -46,7 +46,9 @@ namespace UsersManagment
             if (result == DialogResult.OK)
             {
                 pbProfile.Load(ofdImage.FileName);
+                btnRemoveImage.Visible = true;
             }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -78,6 +80,7 @@ namespace UsersManagment
         private void _AddModeForm()
         {
             lblTitle.Text = "Add New User";
+            this.Text = lblTitle.Text;
 
             txtID.Text = "???";
             txtID.Enabled = false;
@@ -87,11 +90,13 @@ namespace UsersManagment
             txtPassword.Text = "";
             pbProfile.Image = null;
 
+            btnRemoveImage.Visible = false;
         }
 
         private void _UpdateModeFrom()
         {
             lblTitle.Text = "Update User";
+            this.Text = lblTitle.Text;
 
             txtID.Text = _User.ID.ToString();
             txtID.Enabled = false;
@@ -103,10 +108,12 @@ namespace UsersManagment
             if (_User.ImagePath != "" && File.Exists(_User.ImagePath))
             {
                 pbProfile.Load(_User.ImagePath);
+                btnRemoveImage.Visible = true;
             }
             else
             {
                 pbProfile.Image = null;
+                btnRemoveImage.Visible = false;
             }
         }
 
@@ -138,6 +145,12 @@ namespace UsersManagment
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRemoveImage_Click(object sender, EventArgs e)
+        {
+            pbProfile.Image = null;
+            btnRemoveImage.Visible = false;
         }
     }
 }

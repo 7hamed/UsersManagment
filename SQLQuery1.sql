@@ -28,3 +28,6 @@ VALUES
 ('robert_king',     'robert.king@example.com',     'King$456', NULL),
 ('nina_williams',   'nina.williams@example.com',   'NinaTekken', NULL);
 
+
+BACKUP DATABASE DBusers
+TO DISK = 'C:\DataBases_BackUp\DBusers.bak'

@@ -1,6 +1,6 @@
 ﻿namespace UsersManagment
 {
-    partial class Form1
+    partial class frmAddUpdateUsers
     {
         /// <summary>
         /// Required designer variable.

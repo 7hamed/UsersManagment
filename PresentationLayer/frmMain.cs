@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace UsersManagment
 {
-    public partial class Form2 : Form
+    public partial class frmMain : Form
     {
-        public Form2()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace UsersManagment
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Form form = new Form1(-1);
+            Form form = new frmAddUpdateUsers(-1);
             form.ShowDialog();
 
             _RefreshDataGridView();
@@ -39,7 +39,7 @@ namespace UsersManagment
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new Form1((int)dgvUsers.CurrentRow.Cells[0].Value);
+            Form form = new frmAddUpdateUsers((int)dgvUsers.CurrentRow.Cells[0].Value);
             form.ShowDialog();
 
             _RefreshDataGridView();

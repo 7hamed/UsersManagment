@@ -15,7 +15,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace UsersManagment
 {
-    public partial class Form1 : Form
+    public partial class frmAddUpdateUsers : Form
     {
         private enum enMode { AddUser = 1, UpdateUser = 2}
 
@@ -23,7 +23,7 @@ namespace UsersManagment
         private clsUsers _User;
         private int _UserID;
 
-        public Form1(int userID)
+        public frmAddUpdateUsers(int userID)
         {
             InitializeComponent();
 

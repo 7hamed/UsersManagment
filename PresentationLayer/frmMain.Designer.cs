@@ -1,6 +1,6 @@
 ﻿namespace UsersManagment
 {
-    partial class Form2
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
